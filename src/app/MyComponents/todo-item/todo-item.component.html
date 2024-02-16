@@ -1,0 +1,9 @@
+<div class="my-3">
+    <h2 [ngClass]="{'strick' :!todo?.active}">{{todo? todo.title:"no title"}}</h2>
+    <p>{{todo? todo.desc:"no description"}}</p>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckBoxClick(todo)" [checked]="!todo?.active">
+        <label class="form-check-label" for="exampleCheck1">Mark as done</label>
+    </div>
+    <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+</div>
